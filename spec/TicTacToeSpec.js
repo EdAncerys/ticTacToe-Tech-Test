@@ -43,5 +43,13 @@ describe('TicTacToe', () => {
       expect(game.player2Fields().length).toEqual(0);
       expect(game.player2Fields()).toEqual([]);
     });
+
+    it('player1 should not be able to claim same field if its been taken', () => {
+      game.playGame(1);
+      game.playGame(2);
+      game.playGame(2);
+      expect(game.player1Fields().length).toEqual(1);
+      expect(game.player1Fields()).toEqual([1]);
+    });
   });
 });
