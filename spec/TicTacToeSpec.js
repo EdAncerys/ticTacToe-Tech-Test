@@ -23,4 +23,11 @@ describe('TicTacToe', () => {
     game.playGame(2);
     expect(game.player2Fields().length).toEqual(1);
   });
+
+  it('player1 should able to claim field #3 after player2 move', () => {
+    game.playGame(1);
+    game.playGame(2);
+    game.playGame(3);
+    expect(game.player1Fields().length).toEqual(2);
+  });
 });
