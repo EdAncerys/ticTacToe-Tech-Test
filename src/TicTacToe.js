@@ -15,7 +15,7 @@ class TicTacToe {
 
   playGame(field) {
     if (this.gameTurn) this.player1.push(field);
-    // else this.player2.push(field);
-    // this.gameTurn = !this.gameTurn;
+    else this.player2.push(field);
+    this.gameTurn = !this.gameTurn;
   }
 }
