@@ -52,4 +52,15 @@ describe('TicTacToe', () => {
       expect(game.player1Fields()).toEqual([1]);
     });
   });
+
+  describe('Winner Games', () => {
+    it('player1 wins if field 1,2,3 claimed', () => {
+      game.playGame(1);
+      game.playGame(4);
+      game.playGame(2);
+      game.playGame(5);
+      game.playGame(3);
+      expect(game.gameWinner()).toEqual('Player1');
+    });
+  });
 });

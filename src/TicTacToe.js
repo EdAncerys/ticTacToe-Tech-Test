@@ -4,6 +4,7 @@ class TicTacToe {
     this.player1 = [];
     this.player2 = [];
     this.gameTurn = true;
+    this.winner = 'Player1';
   }
 
   player1Fields() {
@@ -12,6 +13,10 @@ class TicTacToe {
 
   player2Fields() {
     return this.player2;
+  }
+
+  gameWinner() {
+    return this.winner;
   }
 
   playGame(field) {
