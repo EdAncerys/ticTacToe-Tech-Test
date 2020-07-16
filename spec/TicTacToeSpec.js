@@ -99,5 +99,15 @@ describe('TicTacToe', () => {
       game.playGame(9);
       expect(game.gameWinner()).toEqual('Player1');
     });
+
+    it('player2 wins if field 2,5,8 claimed', () => {
+      game.playGame(4);
+      game.playGame(2);
+      game.playGame(3);
+      game.playGame(5);
+      game.playGame(6);
+      game.playGame(8);
+      expect(game.gameWinner()).toEqual('Player2');
+    });
   });
 });
