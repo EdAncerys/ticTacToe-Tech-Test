@@ -6,7 +6,7 @@ class TicTacToe {
     this.gameTurn = true;
     this.winningFields = [
       [1, 2, 3],
-      [0, 0, 0],
+      [3, 4, 4],
     ];
     this.winner;
   }
